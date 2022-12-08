@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+mongoose.set('strictQuery', false);
 const cors = require('cors')
 const app = express()
 const Exercises = require('./models/Exercises.js')
