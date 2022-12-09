@@ -5,8 +5,8 @@ const app = express()
 const Exercises = require('./models/Exercises.js')
 app.use(express.json())
 app.use(cors())
-
 require('dotenv').config()
+const MONGODB_URI = process.env.MONGODB_URI
 
 
 app.post('/workout', (req, res) => {
@@ -43,7 +43,10 @@ app.listen(3000, () => {
     console.log('we live')
 })
 
-mongoose.connect('mongodb://localhost:27017/swole-api')
+mongoose.connect(MONGODB_URI, () => {
+    console.log('we good')
+})
 mongoose.connection.once('open', ()=>{
     console.log('connected to mongod...');
 });
+console.log(process.env)
