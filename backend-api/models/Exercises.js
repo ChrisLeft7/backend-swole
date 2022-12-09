@@ -1,11 +1,11 @@
 const mongoose = require('mongoose')
 
 const workoutSchema = new mongoose.Schema({
-    Name: String,
-    Reps: Number,
-    Muscle: String,
-    Tips: String,
-    Image: String
+    name: String,
+    reps: Number,
+    muscle: String,
+    tips: String,
+    image: String
 })
 
 const Exercises = mongoose.model('Exercises', workoutSchema)
