@@ -1,12 +1,12 @@
 const mongoose = require('mongoose')
 
-const workoutSchema = new mongoose.Schema({
-    Name: String,
-    Reps: Number,
-    Muscle: String,
-    Tips: String,
-    Image: String
+const exercisesSchema = new mongoose.Schema({
+    name: String,
+    reps: Number,
+    muscle: String,
+    tips: String,
+    image: String
 })
 
-const Exercises = mongoose.model('Exercises', workoutSchema)
+const Exercises = mongoose.model('Exercises', exercisesSchema)
 module.exports = Exercises
