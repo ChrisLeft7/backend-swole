@@ -6,6 +6,7 @@ const app = express()
 const Exercises = require('./models/Exercises.js')
 app.use(express.json())
 app.use(cors())
+const PORT = process.env.PORT
 
 require('dotenv').config()
 
@@ -40,7 +41,7 @@ app.put('/workout/:id', (req, res) => {
 
 
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log('we live')
 })
 
